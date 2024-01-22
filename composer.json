@@ -2,7 +2,7 @@
     "name": "chasegiunta/query-string",
     "description": "Work with query strings",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
         "craft",
         "cms",
@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0-RC1"
+        "craftcms/cms": "^4.0.0-alpha"
     },
     "autoload": {
         "psr-4": {
@@ -39,5 +39,13 @@
             "queryStringService": "chasegiunta\\querystring\\services\\QueryStringService"
         },
         "class": "chasegiunta\\querystring\\QueryString"
-    }
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
 }

@@ -25,7 +25,7 @@ use Craft;
  * @package   QueryString
  * @since     1.0.0
  */
-class QueryStringTwigExtension extends \Twig_Extension
+class QueryStringTwigExtension extends \Twig\Extension\AbstractExtension
 {
     // Public Methods
     // =========================================================================
@@ -50,8 +50,8 @@ class QueryStringTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('addParams', [$this, 'addParams']),
-            new \Twig_SimpleFilter('removeParams', [$this, 'removeParam']),
+            new \Twig\TwigFilter('addParams', [$this, 'addParams']),
+            new \Twig\TwigFilter('removeParams', [$this, 'removeParam']),
         ];
     }
 
@@ -65,11 +65,11 @@ class QueryStringTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('addParams', [$this, 'addParams']),
-            new \Twig_SimpleFunction('removeParams', [$this, 'removeParams']),
-            new \Twig_SimpleFunction('removeKeys', [$this, 'removeKeys']),
-            new \Twig_SimpleFunction('removeValues', [$this, 'removeValues']),
-            new \Twig_SimpleFunction('replaceParams', [$this, 'replaceParams']),
+            new \Twig\TwigFunction('addParams', [$this, 'addParams']),
+            new \Twig\TwigFunction('removeParams', [$this, 'removeParams']),
+            new \Twig\TwigFunction('removeKeys', [$this, 'removeKeys']),
+            new \Twig\TwigFunction('removeValues', [$this, 'removeValues']),
+            new \Twig\TwigFunction('replaceParams', [$this, 'replaceParams']),
         ];
     }
 
